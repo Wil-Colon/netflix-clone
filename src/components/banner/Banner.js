@@ -43,6 +43,7 @@ const Banner = ({ fetchUrl }) => {
                     {truncate(movie?.overview, 150)}
                 </h1>
             </div>
+            <div className="banner_fadebottom" />
         </header>
     );
 };
