@@ -1,35 +1,56 @@
-.row {
-    margin-left: 20px;
+.slick-slide section {
+    position: relative;
+}
+
+.slick-list div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.slick-slider button {
+    z-index: 1;
+}
+
+.slider-wrapper {
+    width: 85%;
+    margin: auto;
+}
+
+.slider-wrapper h2 {
+    color: white;
+}
+.slider-wrapper-large {
+    width: 95%;
+    margin: auto;
+}
+.slider-wrapper-large h2 {
     color: white;
 }
 
-.row_posters {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 20px;
+.slick-slide {
+    text-align: center;
+    position: relative;
 }
 
-.row_posters::-webkit-scrollbar {
-    display: none;
+.slick-slide-image {
+    position: relative;
+    margin-right: 20px;
+    max-width: 95%;
+    height: auto;
+    box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+        0 8px 16px -8px hsla(0, 0%, 0%, 0.3),
+        0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+    transition: 450ms all;
 }
 
-.row_poster {
-    object-fit: contain;
-    width: 100%;
-    max-height: 100px;
-    margin-right: 10px;
-    transition: transform 450ms;
+.slick-slide-image:hover {
+    transform: scale(1.1);
+}
+.slick-slide-image-margin {
+    padding: 0 10px;
 }
 
-.row_poster:hover {
-    transform: scale(1.08);
-}
-
-.row_posterLarge {
-    max-height: 250px;
-}
-
-.row_posterLarge:hover {
-    transform: scale(1.09);
+.slick-prev:before,
+.slick-next:before {
+    color: #777777;
 }
