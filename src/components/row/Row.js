@@ -7,21 +7,22 @@ import movieTrailer from 'movie-trailer';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import sliderSettings from '../../utils/sliderSettings';
 
 const Row = ({ title, fetchUrl, isLargeRow }) => {
     let windowWidth = window.innerWidth;
-    let slides = windowWidth < 900 ? 3 : windowWidth < 1350 ? 5 : 7;
+
     const base_url = 'https://image.tmdb.org/t/p/w500';
     const [movies, setMovies] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState('');
     const [mouseOver, setMouseOver] = useState(false);
-    const [sliderSettings, setSliderSettings] = useState({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: slides,
-        slidesToScroll: 5,
-    });
+    // const [sliderSettings, setSliderSettings] = useState({
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 7,
+    //     slidesToScroll: 5,
+    // });
 
     function debounce(fn, ms) {
         let timer;
@@ -34,11 +35,23 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         };
     }
 
+    // useEffect(() => {
+    //     slides = windowWidth > 900 ? 6 : 3;
+    //     const debouncedHandleResize = debounce(function handleResize() {
+    //         setSliderSettings({ ...sliderSettings, slidesToShow: slides });
+    //     }, 0);
+
+    //     window.addEventListener('resize', debouncedHandleResize);
+
+    //     return (_) => {
+    //         window.removeEventListener('resize', debouncedHandleResize);
+    //     };
+    // });
+
     useEffect(() => {
         const debouncedHandleResize = debounce(function handleResize() {
-            slides = windowWidth < 900 ? 3 : windowWidth < 1350 ? 5 : 7;
-            setSliderSettings({ ...sliderSettings, slidesToShow: slides });
-        }, 50);
+            windowWidth = window.innerWidth;
+        }, 100);
 
         window.addEventListener('resize', debouncedHandleResize);
 
@@ -87,11 +100,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     };
 
     return (
-        <div
-            className={`${
-                windowWidth > 900 ? 'slider-wrapper-large' : 'slider-wrapper'
-            }`}
-        >
+        <div className="slider-wrapper">
             <h2>{title}</h2>
 
             <Slider {...sliderSettings}>
@@ -109,11 +118,9 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                             onClick={() => handleClick(movie, drag)}
                             onMouseOver={() => {
                                 setMouseOver(!mouseOver);
-                                console.log(mouseOver);
                             }}
                             onMouseOut={() => {
                                 setMouseOver(!mouseOver);
-                                console.log(mouseOver);
                             }}
                             alt={''}
                         />
