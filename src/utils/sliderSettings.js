@@ -14,39 +14,38 @@ const ArrowLeft = (props) => (
 );
 const sliderSettings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 6.5,
     slidesToScroll: 4,
     arrows: true,
-
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
     responsive: [
         {
             breakpoint: 1200,
             settings: {
-                slidesToShow: 5,
+                slidesToShow: 5.5,
                 slidesToScroll: 3,
-                infinite: false,
+                infinite: true,
                 dots: false,
             },
         },
         {
             breakpoint: 1000,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 3.5,
                 slidesToScroll: 3,
-                infinite: false,
+                infinite: true,
                 dots: false,
             },
         },
         {
             breakpoint: 600,
             settings: {
-                slidesToShow: 2,
+                slidesToShow: 2.5,
                 slidesToScroll: 2,
-                infinite: false,
+                infinite: true,
                 dots: false,
             },
         },

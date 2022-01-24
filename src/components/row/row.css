@@ -25,15 +25,11 @@
     z-index: 1;
     position: absolute;
     font-size: 3em;
-    right: 0px;
+    right: -1px;
     /* height: 50%; */
     top: 19px;
-    bottom: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 100%
-    );
+    bottom: 10px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #111 100%);
     border-style: none;
     color: white;
     transition: 450ms all;
@@ -45,12 +41,8 @@
     font-size: 3em;
     left: 0px;
     top: 19px;
-    bottom: 0;
-    background: linear-gradient(
-        -90deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 1) 100%
-    );
+    bottom: 10px;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, #111 100%);
     border-style: none;
     color: white;
     transition: 450ms all;
