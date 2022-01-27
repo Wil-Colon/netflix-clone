@@ -3,10 +3,6 @@ const router = express.Router();
 const config = require('config');
 const axios = require('axios');
 
-router.get('/', (req, res) => {
-    res.send('test');
-});
-
 router.get('/fetchtrending', async (req, res) => {
     const API_KEY = config.get('TMBD_API');
     try {
