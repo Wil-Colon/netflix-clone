@@ -91,3 +91,13 @@
 .slick-next:before {
     color: #777777;
 }
+
+.you-tube-hidden {
+    height: 0px;
+    transition: 350ms all;
+}
+
+.you-tube {
+    height: 390px;
+    transition: 350ms all;
+}

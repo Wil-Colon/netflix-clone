@@ -1,18 +1,16 @@
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-
 const ArrowRight = (props) => (
     <button {...props} className={'next'}>
-        <i class="fas fa-chevron-right"></i>
+        <i className="fas fa-chevron-right"></i>
     </button>
 );
 
 const ArrowLeft = (props) => (
     <button {...props} className={'prev'}>
-        <i class="fas fa-chevron-left"></i>
+        <i className="fas fa-chevron-left"></i>
     </button>
 );
-const sliderSettings = {
+
+const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -52,4 +50,4 @@ const sliderSettings = {
     ],
 };
 
-export default sliderSettings;
+export default settings;
