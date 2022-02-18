@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const config = require('config');
 const axios = require('axios');
-const API_KEY = config.get('TMBD_API');
+// const API_KEY = config.get('TMBD_API');
+const API_KEY = process.env.API_KEY;
 
 router.get('/fetchtrending', async (req, res) => {
     try {
