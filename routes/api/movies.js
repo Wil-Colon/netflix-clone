@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const config = require('config');
 const axios = require('axios');
+const API_KEY = config.get('TMBD_API');
 
 router.get('/fetchtrending', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`
@@ -17,7 +17,6 @@ router.get('/fetchtrending', async (req, res) => {
 });
 
 router.get('/fetchNetflixOriginals', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213`
@@ -30,7 +29,6 @@ router.get('/fetchNetflixOriginals', async (req, res) => {
 });
 
 router.get('/fetchTopRated', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US`
@@ -43,7 +41,6 @@ router.get('/fetchTopRated', async (req, res) => {
 });
 
 router.get('/fetchActionMovies', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`
@@ -56,7 +53,6 @@ router.get('/fetchActionMovies', async (req, res) => {
 });
 
 router.get('/fetchComedyMovies', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=35`
@@ -69,7 +65,6 @@ router.get('/fetchComedyMovies', async (req, res) => {
 });
 
 router.get('/fetchHorrorMovies', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27`
@@ -82,7 +77,6 @@ router.get('/fetchHorrorMovies', async (req, res) => {
 });
 
 router.get('/fetchRomanceMovies', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=10749`
@@ -95,7 +89,6 @@ router.get('/fetchRomanceMovies', async (req, res) => {
 });
 
 router.get('/fetchDocumentaries', async (req, res) => {
-    const API_KEY = config.get('TMBD_API');
     try {
         const response = await axios.get(
             `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=99`

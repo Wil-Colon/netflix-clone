@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Row from './components/row/Row';
 import Banner from './components/banner/Banner';
 import Nav from './components/nav/Nav';
