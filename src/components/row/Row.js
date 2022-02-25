@@ -1,17 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getMovies } from '../../requests/requests';
 import './row.scss';
 import ListItem from '../listItem/ListItem';
-import {
-    ArrowBackIosOutlined,
-    ArrowForwardIosOutlined,
-} from '@material-ui/icons';
 import Slider from 'react-slick';
 import settings from '../../utils/sliderSettings';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Row = ({ title, fetchUrl, isLargeRow }) => {
+const Row = ({ title, fetchUrl }) => {
     const [movies, setMovies] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 

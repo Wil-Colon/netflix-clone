@@ -15,13 +15,11 @@ const settings = {
     infinite: true,
     speed: 500,
     slidesPerRow: 1,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
     arrows: true,
     nextArrow: <ArrowRight />,
     prevArrow: <ArrowLeft />,
     variableWidth: true,
-
-    // slidesToShow: 4,
     responsive: [
         {
             breakpoint: 480,
@@ -32,8 +30,8 @@ const settings = {
                 slidesToScroll: 2,
                 infinite: true,
                 variableWidth: true,
-                centerMode: true,
-                // adaptiveHeight: true,
+                arrows: false,
+                touchThreshold: 60,
             },
         },
     ],
