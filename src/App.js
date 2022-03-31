@@ -8,23 +8,23 @@ import Login from './components/login/Login';
 
 function App() {
     return (
-        <Login />
+        // <Login />
 
-        // <div className="App">
-        //     <Nav />
-        //     <Banner fetchUrl={'fetchNetflixOriginals'} />
-        //     <Row
-        //         title="NETFLIX ORIGINALS"
-        //         fetchUrl={'fetchNetflixOriginals'}
-        //         isLargeRow
-        //     />
-        //     <Row title="Trending Now" fetchUrl={'fetchtrending'} />
-        //     <Row title="Top Rated" fetchUrl={'fetchtoprated'} />
-        //     <Row title="Action Movies" fetchUrl={'fetchactionmovies'} />
-        //     <Row title="Comedy Movies" fetchUrl={'fetchcomedymovies'} />
-        //     <Row title="Horror Movies" fetchUrl={'fetchHorrorMovies'} />
-        //     <Row title="Documentaries" fetchUrl={'fetchDocumentaries'} />
-        // </div>
+        <div className="App">
+            <Nav />
+            <Banner fetchUrl={'fetchNetflixOriginals'} />
+            <Row
+                title="NETFLIX ORIGINALS"
+                fetchUrl={'fetchNetflixOriginals'}
+                isLargeRow
+            />
+            <Row title="Trending Now" fetchUrl={'fetchtrending'} />
+            <Row title="Top Rated" fetchUrl={'fetchtoprated'} />
+            <Row title="Action Movies" fetchUrl={'fetchactionmovies'} />
+            <Row title="Comedy Movies" fetchUrl={'fetchcomedymovies'} />
+            <Row title="Horror Movies" fetchUrl={'fetchHorrorMovies'} />
+            <Row title="Documentaries" fetchUrl={'fetchDocumentaries'} />
+        </div>
     );
 }
 
